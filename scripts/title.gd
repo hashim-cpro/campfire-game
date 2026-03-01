@@ -8,22 +8,20 @@ extends Control
 const splashes = ["res://assets/images/Teri Games.png"]
 
 func playSplashScreen(splash: String) -> void:
-	splashScreen.texture = load(splash)
 	$AnimationPlayer.play("splash fade in")
 	await get_tree().create_timer(5).timeout
+	$SplashScreen.queue_free()
 	$AnimationPlayer.play("splash fade out")
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(0).timeout
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	optionsScreen.visible = false
 	creditsScreen.visible = false
-	splashScreen.visible = true
 	titleScreen.visible = false
 	for splash in splashes:
 		print("Loading splash ", splash)
 		await playSplashScreen(splash)
-	splashScreen.visible = false
 	titleScreen.visible = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

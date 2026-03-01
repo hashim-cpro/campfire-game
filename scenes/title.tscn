@@ -1,11 +1,29 @@
-[gd_scene load_steps=11 format=3 uid="uid://cspay6tcjcac4"]
+[gd_scene format=3 uid="uid://cspay6tcjcac4"]
 
-[ext_resource type="Texture2D" uid="uid://bx1aj4msnomd5" path="res://assets/images/Teri Games.png" id="1_il4uk"]
 [ext_resource type="Script" uid="uid://dt2ns2rk66ypc" path="res://scripts/title.gd" id="1_wgpm7"]
-[ext_resource type="FontFile" uid="uid://bj6gpbsihif0h" path="res://assets/fonts/PixelOperator8.ttf" id="1_yngji"]
-
-[sub_resource type="Theme" id="Theme_wrp1t"]
-default_font = ExtResource("1_yngji")
+[ext_resource type="VideoStream" uid="uid://b6cjk1h1i1kvs" path="res://sprites/logo-animation.ogv" id="3_p6dhs"]
+[ext_resource type="AudioStream" uid="uid://bqg8w8pnk6xcs" path="res://sprites/logo-intro.ogg" id="4_pyl7j"]
+[ext_resource type="FontFile" uid="uid://c2mvpfdpg151f" path="res://assets/fonts/Canada Gothic.otf" id="5_b3w7a"]
+[ext_resource type="AudioStream" uid="uid://bgqtyie6eohck" path="res://assets/sounds/main_audio.ogg" id="6_4rr2b"]
+[ext_resource type="Texture2D" uid="uid://e8jt6ltpfbyv" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_000.png" id="6_wtvjo"]
+[ext_resource type="Texture2D" uid="uid://bqhlpnj7w4nqj" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_001.png" id="7_t8o15"]
+[ext_resource type="Texture2D" uid="uid://cu77ejn101lk1" path="res://assets/images/bg.jpeg" id="7_yql1r"]
+[ext_resource type="Texture2D" uid="uid://cyl670xgcy7us" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_002.png" id="8_opmo2"]
+[ext_resource type="Texture2D" uid="uid://oejal6dc0qju" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_003.png" id="9_owywo"]
+[ext_resource type="Texture2D" uid="uid://cut3hleghfotg" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_004.png" id="10_a4fnx"]
+[ext_resource type="Texture2D" uid="uid://crfdc7ae57nsn" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_005.png" id="11_75bkb"]
+[ext_resource type="Texture2D" uid="uid://b76f4lk8lw8h5" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_006.png" id="12_cgg5c"]
+[ext_resource type="Texture2D" uid="uid://dd3c76wb8n2bt" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_007.png" id="13_k1qkb"]
+[ext_resource type="Texture2D" uid="uid://bjt2k1djcaqv3" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_008.png" id="14_2as01"]
+[ext_resource type="Texture2D" uid="uid://cao4ugrlpvh1v" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_009.png" id="15_iq6fq"]
+[ext_resource type="Texture2D" uid="uid://cq04awklkhs05" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_010.png" id="16_mg5ff"]
+[ext_resource type="Texture2D" uid="uid://b75tdnxkhg4ut" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_011.png" id="17_52c44"]
+[ext_resource type="Texture2D" uid="uid://dpqrx8ovii5v8" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_012.png" id="18_pqt7r"]
+[ext_resource type="Texture2D" uid="uid://c5fheys0t0mck" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_013.png" id="19_pv6bm"]
+[ext_resource type="Texture2D" uid="uid://dtuutqpx8323r" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_014.png" id="20_6qeuo"]
+[ext_resource type="Texture2D" uid="uid://dti612cobk8f6" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_015.png" id="21_hxnlc"]
+[ext_resource type="Texture2D" uid="uid://p4iue3k54jnd" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_016.png" id="22_hgdh2"]
+[ext_resource type="Texture2D" uid="uid://c5nbep1a2nenv" path="res://assets/Dark_Oracle_3/PNG/PNG Sequences/Idle Blinking/0_Dark_Oracle_Idle Blinking_017.png" id="23_3xwc1"]
 
 [sub_resource type="Animation" id="Animation_rxayq"]
 length = 0.001
@@ -59,118 +77,215 @@ _data = {
 &"splash fade out": SubResource("Animation_fqah0")
 }
 
-[sub_resource type="LabelSettings" id="LabelSettings_qqgd0"]
-font_size = 64
-font_color = Color(0.872812, 0, 0.388201, 1)
+[sub_resource type="Theme" id="Theme_4rr2b"]
 
 [sub_resource type="Theme" id="Theme_rqyyy"]
 default_font_size = 32
 
-[node name="Title" type="Control"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4rr2b"]
+texture = ExtResource("7_yql1r")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gd8d8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wtvjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t8o15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_opmo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_owywo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a4fnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_75bkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cgg5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_k1qkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2as01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_iq6fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mg5ff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_52c44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_pqt7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_pv6bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6qeuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hxnlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_hgdh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_3xwc1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="Title" type="Control" unique_id=1038314072]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_wrp1t")
 script = ExtResource("1_wgpm7")
 
-[node name="SplashScreen" type="TextureRect" parent="."]
-visible = false
+[node name="SplashScreen" type="VideoStreamPlayer" parent="." unique_id=1087437717]
 modulate = Color(0, 0, 0, 1)
+z_index = 10
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_il4uk")
-expand_mode = 1
+stream = ExtResource("3_p6dhs")
+autoplay = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_vhfq3")
-}
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SplashScreen" unique_id=444453668]
+stream = ExtResource("4_pyl7j")
+autoplay = true
 
-[node name="TitleScreen" type="VBoxContainer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1751685709]
+libraries/ = SubResource("AnimationLibrary_vhfq3")
+autoplay = &"RESET"
+
+[node name="OptionsScreen" type="VBoxContainer" parent="." unique_id=654768754]
+visible = false
+layout_mode = 0
+offset_right = 114.0
+offset_bottom = 44.0
+alignment = 1
+
+[node name="BackButton_fromOptions" type="Button" parent="OptionsScreen" unique_id=521165725]
+layout_mode = 2
+text = "Back"
+
+[node name="FPSLimit_container" type="HBoxContainer" parent="OptionsScreen" unique_id=1463742807]
+layout_mode = 2
+alignment = 1
+
+[node name="FPSLimit_text" type="Label" parent="OptionsScreen/FPSLimit_container" unique_id=1832029642]
+layout_mode = 2
+text = "FPS Limit"
+
+[node name="CreditsScreen" type="VBoxContainer" parent="." unique_id=1175586511]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="BackButton_fromCredits" type="Button" parent="CreditsScreen" unique_id=1579751276]
+visible = false
+layout_mode = 2
+
+[node name="TitleScreen" type="VBoxContainer" parent="." unique_id=429673935]
+z_index = 4096
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -388.0
-offset_top = -106.0
-offset_right = 388.0
-offset_bottom = 106.0
+offset_left = -55.0
+offset_top = -195.0
+offset_right = 579.0
+offset_bottom = 19.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_4rr2b")
 theme_override_constants/separation = 64
 
-[node name="Title" type="Label" parent="TitleScreen"]
-layout_mode = 2
-text = "Killer Instincts"
-label_settings = SubResource("LabelSettings_qqgd0")
-horizontal_alignment = 1
-
-[node name="TitleScreen_buttons" type="VBoxContainer" parent="TitleScreen"]
+[node name="TitleScreen_buttons" type="VBoxContainer" parent="TitleScreen" unique_id=960979166]
 clip_contents = true
 layout_mode = 2
 theme = SubResource("Theme_rqyyy")
 theme_override_constants/separation = 12
 alignment = 1
 
-[node name="PlayButton" type="Button" parent="TitleScreen/TitleScreen_buttons"]
+[node name="Title" type="Label" parent="TitleScreen/TitleScreen_buttons" unique_id=818662304]
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("5_b3w7a")
+theme_override_font_sizes/font_size = 90
+text = "Below The Spectrum"
+
+[node name="PlayButton" type="Button" parent="TitleScreen/TitleScreen_buttons" unique_id=533345416]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8378009, 0.7238993, 1)
+theme_override_fonts/font = ExtResource("5_b3w7a")
+theme_override_font_sizes/font_size = 70
 text = "Play"
 flat = true
 clip_text = true
 
-[node name="OptionsButton" type="Button" parent="TitleScreen/TitleScreen_buttons"]
+[node name="OptionsButton" type="Button" parent="TitleScreen/TitleScreen_buttons" unique_id=1534768179]
 visible = false
 layout_mode = 2
 text = "Options"
 flat = true
 clip_text = true
 
-[node name="CreditsButton" type="Button" parent="TitleScreen/TitleScreen_buttons"]
+[node name="CreditsButton" type="Button" parent="TitleScreen/TitleScreen_buttons" unique_id=1125095580]
 visible = false
 layout_mode = 2
 text = "Credits"
 flat = true
 clip_text = true
 
-[node name="OptionsScreen" type="VBoxContainer" parent="."]
-visible = false
-layout_mode = 2
-offset_right = 114.0
-offset_bottom = 44.0
-alignment = 1
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TitleScreen" unique_id=1473716323]
+position = Vector2(173, -39)
+stream = ExtResource("6_4rr2b")
+autoplay = true
 
-[node name="BackButton_fromOptions" type="Button" parent="OptionsScreen"]
-layout_mode = 2
-text = "Back"
+[node name="Panel" type="Panel" parent="." unique_id=1427241675]
+z_index = -10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4rr2b")
 
-[node name="FPSLimit_container" type="HBoxContainer" parent="OptionsScreen"]
-layout_mode = 2
-alignment = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1609852284]
+z_index = -3
+position = Vector2(574, 727)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_gd8d8")
+autoplay = "default"
+frame_progress = 0.22557853
+speed_scale = 0.5
 
-[node name="FPSLimit_text" type="Label" parent="OptionsScreen/FPSLimit_container"]
-layout_mode = 2
-text = "FPS Limit"
-
-[node name="CreditsScreen" type="VBoxContainer" parent="."]
-visible = false
-layout_mode = 2
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="BackButton_fromCredits" type="Button" parent="CreditsScreen"]
-layout_mode = 2
-
+[connection signal="pressed" from="OptionsScreen/BackButton_fromOptions" to="." method="_on_back_button_from_options_pressed"]
+[connection signal="pressed" from="CreditsScreen/BackButton_fromCredits" to="." method="_on_back_button_from_credits_pressed"]
 [connection signal="pressed" from="TitleScreen/TitleScreen_buttons/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="TitleScreen/TitleScreen_buttons/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="TitleScreen/TitleScreen_buttons/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="OptionsScreen/BackButton_fromOptions" to="." method="_on_back_button_from_options_pressed"]
-[connection signal="pressed" from="CreditsScreen/BackButton_fromCredits" to="." method="_on_back_button_from_credits_pressed"]
