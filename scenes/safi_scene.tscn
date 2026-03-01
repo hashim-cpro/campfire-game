@@ -1,0 +1,97 @@
+[gd_scene format=4 uid="uid://cyoioaqau6ycy"]
+
+[ext_resource type="PackedScene" uid="uid://30ywf4vwchjw" path="res://scenes/player.tscn" id="1_c16b0"]
+[ext_resource type="Texture2D" uid="uid://b38nfnqfdggfa" path="res://assets/images/tile_black.png" id="2_367v6"]
+[ext_resource type="Texture2D" uid="uid://cx5yw8sj2y1yr" path="res://assets/images/tile_cyan.png" id="3_df60r"]
+[ext_resource type="Texture2D" uid="uid://b3awnxftby6wn" path="res://assets/images/tile_red.png" id="4_lhwmh"]
+[ext_resource type="PackedScene" uid="uid://5q6vqa3inh1l" path="res://scenes/kill_zone.tscn" id="5_emy0h"]
+[ext_resource type="PackedScene" uid="uid://b1ekvcanehg22" path="res://scenes/pause_menu.tscn" id="6_if88c"]
+[ext_resource type="PackedScene" uid="uid://drpkytfku1os0" path="res://scenes/bar.tscn" id="7_pxm0b"]
+[ext_resource type="PackedScene" uid="uid://dbjpkux1c7l75" path="res://scenes/background_layer.tscn" id="8_wvjm3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ssvqc"]
+texture = ExtResource("2_367v6")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_264po"]
+texture = ExtResource("3_df60r")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1kice"]
+texture = ExtResource("4_lhwmh")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5newe"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ssvqc")
+sources/1 = SubResource("TileSetAtlasSource_264po")
+sources/2 = SubResource("TileSetAtlasSource_1kice")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_22jfk"]
+distance = -24.0
+
+[node name="Safi scene" type="Node2D" unique_id=335209575 groups=["Color_Yellow"]]
+
+[node name="CharacterBody2D" parent="." unique_id=402884066 instance=ExtResource("1_c16b0")]
+position = Vector2(-867, -127)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=873635194]
+zoom = Vector2(2, 2)
+limit_top = -500
+limit_bottom = 100
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Label" type="Label" parent="CharacterBody2D" unique_id=41298398]
+offset_left = -30.0
+offset_top = -37.0
+offset_right = 16.0
+offset_bottom = -14.0
+metadata/_edit_use_anchors_ = true
+
+[node name="New Layer" type="TileMapLayer" parent="." unique_id=1123679478]
+tile_map_data = PackedByteArray("AADQ//n/AAAAAAAAAADR//n/AAAAAAAAAADS//n/AAAAAAAAAADT//n/AAAAAAAAAADU//n/AAAAAAAAAADV//n/AAAAAAAAAADW//n/AAAAAAAAAAC8//j/AAAAAAAAAAC8//n/AAAAAAAAAAC8//r/AAAAAAAAAAC8//v/AAAAAAAAAAC8//z/AAAAAAAAAAC8//3/AAAAAAAAAAC8//7/AAAAAAAAAAC8////AAAAAAAAAAC9/wAAAAAAAAAAAAC8/wAAAAAAAAAAAAC+/wAAAAAAAAAAAAC//wAAAAAAAAAAAADA/wAAAAAAAAAAAADB/wAAAAAAAAAAAADC/wAAAAAAAAAAAADD/wAAAAAAAAAAAADD////AAAAAAAAAADE////AAAAAAAAAADF////AAAAAAAAAADG////AAAAAAAAAADH////AAAAAAAAAADH//7/AAAAAAAAAADI//7/AAAAAAAAAADJ//7/AAAAAAAAAADJ//3/AAAAAAAAAADK//3/AAAAAAAAAADK//z/AAAAAAAAAADL//z/AAAAAAAAAADM//z/AAAAAAAAAADM//v/AAAAAAAAAADM//r/AAAAAAAAAADN//r/AAAAAAAAAADN//n/AAAAAAAAAADO//n/AAAAAAAAAADO//j/AAAAAAAAAADP//j/AAAAAAAAAADQ//j/AAAAAAAAAADQ//f/AAAAAAAAAADR//f/AAAAAAAAAADR//b/AAAAAAAAAADS//b/AAAAAAAAAADS//X/AAAAAAAAAADT//X/AAAAAAAAAADT//T/AAAAAAAAAADU//T/AAAAAAAAAADU//P/AAAAAAAAAADU//L/AAAAAAAAAADV//L/AAAAAAAAAADW//L/AAAAAAAAAADW//H/AAAAAAAAAADW//D/AAAAAAAAAADX//D/AAAAAAAAAADY/+//AAAAAAAAAADZ/+//AAAAAAAAAADZ//D/AAAAAAAAAADa//H/AAAAAAAAAADb//H/AAAAAAAAAADb//L/AAAAAAAAAADb//P/AAAAAAAAAADb//T/AAAAAAAAAADc//T/AAAAAAAAAADc//X/AAAAAAAAAADc//b/AAAAAAAAAADd//b/AAAAAAAAAADd//f/AAAAAAAAAADe//f/AAAAAAAAAADe//j/AAAAAAAAAADf//n/AAAAAAAAAADf//r/AAAAAAAAAADf//v/AAAAAAAAAADg//v/AAAAAAAAAADg//z/AAAAAAAAAADh//z/AAAAAAAAAADh//3/AAAAAAAAAADi//3/AAAAAAAAAADi//7/AAAAAAAAAADj//7/AAAAAAAAAADj////AAAAAAAAAADk////AAAAAAAAAADk/wAAAAAAAAAAAADl/wAAAAAAAAAAAADm/wAAAAAAAAAAAADn/wAAAAAAAAAAAADo/wAAAAAAAAAAAADo/wEAAAAAAAAAAADp/wEAAAAAAAAAAADq/wEAAAAAAAAAAADr/wEAAAAAAAAAAADs/wEAAAAAAAAAAADt/wEAAAAAAAAAAADu/wEAAAAAAAAAAADu/wAAAAAAAAAAAADt/wAAAAAAAAAAAADt////AAAAAAAAAADt//7/AAAAAAAAAADt//3/AAAAAAAAAADk//j/AAAAAAAAAADl//j/AAAAAAAAAADm//j/AAAAAAAAAADn//j/AAAAAAAAAADo//j/AAAAAAAAAADp//j/AAAAAAAAAADq//j/AAAAAAAAAADr//f/AAAAAAAAAADs//f/AAAAAAAAAADt//f/AAAAAAAAAADt//b/AAAAAAAAAADt//X/AAAAAAAAAADt//T/AAAAAAAAAADt//P/AAAAAAAAAADt//L/AAAAAAAAAADt//H/AAAAAAAAAADu//H/AAAAAAAAAADu//D/AAAAAAAAAADu/+//AAAAAAAAAADu/+7/AAAAAAAAAADu//b/AAAAAAAAAADu//f/AAAAAAAAAADv//f/AAAAAAAAAADw//f/AAAAAAAAAADx//f/AAAAAAAAAADy//f/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_5newe")
+
+[node name="KillZone" parent="." unique_id=1432957165 instance=ExtResource("5_emy0h")]
+position = Vector2(-903, 106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=644439329]
+position = Vector2(37, 2)
+shape = SubResource("WorldBoundaryShape2D_22jfk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2036763930]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=1382693289 instance=ExtResource("6_if88c")]
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Bar" parent="CanvasLayer" unique_id=504922612 instance=ExtResource("7_pxm0b")]
+offset_left = -2102.0
+offset_top = 86.0
+offset_right = -2102.0
+offset_bottom = 86.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1058465495]
+
+[node name="BackgroundLayer" parent="." unique_id=149390363 instance=ExtResource("8_wvjm3")]
+
+[connection signal="body_entered" from="KillZone" to="CharacterBody2D" method="_on_kill_zone_body_entered"]
+[connection signal="body_entered" from="KillZone" to="KillZone" method="_on_body_entered"]

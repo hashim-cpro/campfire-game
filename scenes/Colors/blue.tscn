@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://4xwl0wtu4b8i"]
+
+[ext_resource type="Texture2D" uid="uid://dlkcwuq1pnql" path="res://assets/images/tile_blue.png" id="1_oahj1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ya7hw"]
+size = Vector2(10, 10)
+
+[node name="blue" type="AnimatableBody2D" unique_id=512943851 groups=["Color_Blue"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1347665676 groups=["Color_Blue"]]
+position = Vector2(6, 1.0000001)
+scale = Vector2(0.6666667, 0.6333334)
+texture = ExtResource("1_oahj1")
+region_enabled = true
+region_rect = Rect2(1.323, 0.054, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1541981721 groups=["Color_Blue"]]
+position = Vector2(6, 1)
+shape = SubResource("RectangleShape2D_ya7hw")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cl6tsy20bd7bm"]
+
+[ext_resource type="Texture2D" uid="uid://cx5yw8sj2y1yr" path="res://assets/images/tile_cyan.png" id="1_rvcx2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ya7hw"]
+size = Vector2(10, 10)
+
+[node name="cyan" type="AnimatableBody2D" unique_id=512943851 groups=["Color_Cyan"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1347665676 groups=["Color_Cyan"]]
+position = Vector2(6, 1.0000001)
+scale = Vector2(0.6666667, 0.6333334)
+texture = ExtResource("1_rvcx2")
+region_enabled = true
+region_rect = Rect2(1.323, 0.054, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1541981721 groups=["Color_Cyan"]]
+position = Vector2(6, 1)
+shape = SubResource("RectangleShape2D_ya7hw")

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dbjpkux1c7l75"]
+
+[ext_resource type="Script" uid="uid://dr3jhhhsc831r" path="res://scenes/background_layer.gd" id="1_81jil"]
+[ext_resource type="Shader" uid="uid://c5oiv3ffsabll" path="res://background.gdshader" id="1_757nl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_81jil"]
+shader = ExtResource("1_757nl")
+shader_parameter/u_old_color = Color(0.5, 0.5, 0.5, 1)
+shader_parameter/u_new_color = Color(0.5, 0.5, 0.5, 1)
+shader_parameter/u_center = Vector2(0.5, 0.5)
+shader_parameter/u_radius = 0.0
+shader_parameter/u_aspect = 1.77
+shader_parameter/speed = 0.05
+
+[node name="BackgroundLayer" type="CanvasLayer" unique_id=149390363]
+layer = -1000
+script = ExtResource("1_81jil")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1636803431]
+material = SubResource("ShaderMaterial_81jil")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5953762, 0.34378192, 0.6363058, 1)
